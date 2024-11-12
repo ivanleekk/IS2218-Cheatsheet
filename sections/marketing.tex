@@ -1,0 +1,113 @@
+\section{Marketing}
+Marketing is the process of creating, communicating, delivering, and exchanging offerings that have value for customers, clients, partners, and society at large. It involves understanding the needs and wants of customers and creating value for them. The marketing mix consists of the 4Ps: Product, Price, Place, and Promotion.
+
+\subsection{Evolutions in Marketing}
+\begin{enumerate}
+	\item \textbf{Production Era:} Focus on production and distribution efficiencies.
+	\item \textbf{Product Era:} Focus on making continued product innovations.
+	\item \textbf{Selling Era:} Focus on selling and promotions.
+	\item \textbf{Marketing Era:} Focus on Buyer's Needs and determining the needs and wants of target markets.
+\end{enumerate}
+\begin{center}
+
+	\begin{tikzpicture}[
+		box/.style={draw, rectangle, minimum width=2cm, minimum height=1cm, text width=2cm, align=center},
+		arrow/.style={-{Latex[length=2mm]}, thick},
+		]
+		
+		\node[box] (driven1) at (0.2\columnwidth, 0) {Customer-\textbf{Driven}};
+		\node[box] (driven2) at (0.5\columnwidth, 0) {Understand Customer Needs};
+		\node[box] (driven3) at (0.8\columnwidth, 0) {Create products that meet current needs};
+
+		\draw[arrow] (driven1) -- (driven2);
+		\draw[arrow] (driven2) -- (driven3);
+
+
+		\node[box] (driving1) at (0.2\columnwidth, -2) {Customer-\textbf{Driving}};
+		\node[box] (driving2) at (0.5\columnwidth, -2) {Understand Customer Needs \textbf{better} than themselves};
+		\node[box] (driving3) at (0.8\columnwidth, -2) {Create products that meet current \textbf{AND} future needs};
+
+		\draw[arrow] (driving1) -- (driving2);
+		\draw[arrow] (driving2) -- (driving3);
+	\end{tikzpicture}
+\end{center}
+
+\subsection{Customer Relationships}
+CRM is the process of building and maintaining profitable customer relationships by delivering superior customer value and satisfaction. Attracting, keeping and growing profitable customers.
+
+\begin{center}
+\begin{tikzpicture}[scale=4,
+		box/.style={minimum width=2cm, minimum height=1cm, text width=2cm, align=center},
+		]
+    % Draw the main square
+    \draw (0,0) rectangle (1,1);
+
+    % Draw the dividing lines
+    \draw (0.5,0) -- (0.5,1);
+    \draw (0,0.5) -- (1,0.5);
+	\scriptsize
+    % Place text in each corner
+	\node[box] (butterflies) at (0.25,0.75) {\textbf{Butterflies}\\Good fit between company and customer but short term};
+	\node[box] (true friends) at (0.75,0.75) {\textbf{True Friends}\\Good fit between company and customer and long term};
+	\node[box] (strangers) at (0.25,0.25) {\textbf{Strangers}\\Poor fit between company and customer and short term};
+	\node[box] (barnacles) at (0.75,0.25) {\textbf{Barnacles}\\Poor fit between company and customer but long term};
+
+    \node[left=0.5cm of butterflies] {High Profitability};
+    \node[left=0.5cm of strangers] {Low Profitability};
+    \node[above=0.5cm of butterflies] {Short Term};
+    \node[above=0.5cm of true friends] {Long Term};
+\end{tikzpicture}
+\end{center}
+
+\subsection{Marketing Management}
+Marketing management is the art and science of choosing target markets and building profitable relationships with them. It involves planning, implementing, and controlling marketing programs to bring about exchanges with target markets to achieve organisational goals.
+
+\begin{enumerate}
+	\item \textbf{Analyse & Identify Opportunities:} Understand the marketplace and customer needs and wants.		
+		\begin{itemize}
+			\item Marketing Research and Information Systems
+			\item Marketing Environment Scanning
+			\item Consumer & Business Markets
+		\end{itemize}
+	\item \textbf{Research & Select Target Markets:} Find markets		
+		\begin{itemize}
+			\item Meassuring & Forecasting Demand
+			\item Market Segmentation, Targeting, Positioning
+		\end{itemize}
+	\item \textbf{Design Marketing Strategies:} Develop value propositions	
+		\begin{itemize}
+			\item Product, Price, Place, Promotion
+			\item Marketing Mix
+		\end{itemize}
+	\item \textbf{Managing the Marketing Effort:} Keep it working
+		\begin{itemize}
+			\item SWOT Analysis
+			\item Planning and Objective Setting
+			\item Marketing Implementation
+			\item Marketing Control
+		\end{itemize}
+\end{enumerate}
+
+Segmentation is dividing a market into distinct groups of buyers who have different needs, characteristics, or behaviours, and who might require separate products or marketing programs. Targeting is selecting one or more segments to enter. Positioning is the way the product is defined by consumers on important attributes and is perception based.
+
+\section{Customer Lifetime Value}
+Customer Lifetime Value (CLV) is the present value of the future cash flows attributed to the customer during his/her entire relationship with the company. It is the total revenue a company expects to earn from a customer during the entire relationship. It is important to understand the value of a customer to the company.
+
+\subsection{Calculating CLV}
+{\scriptsize \begin{align*}
+	CLV &= (M-R)\left(1+\left(\frac{r}{1+d}\right)^1+\left(\frac{r}{1+d}\right)^2+\left(\frac{r}{1+d}\right)^3 + \ldots \right) \\
+	&= (M-R)\left(\frac{1+d}{1+d-r}\right) \\
+	&\text{If Revenue is after Service} \\
+	CLV &= (M-R)\left(\frac{r}{1+d-r}\right) \\
+	\text{Where:} \\
+	CLV &= \text{Customer Lifetime Value} \\
+	M &= \text{Margin aka Revenue} - \text{Variable Costs} \\
+	R &= \text{Retention Spending} \\
+	r &= \text{Retention Rate} \\
+	d &= \text{Discount Rate}\\
+	\text{Survival Rate} &= r^{t-1}
+\end{align*}}
+
+CLV affects the company's marketing strategy, customer acquisition, and customer retention. It is important to understand the value of a customer to the company.
+
+Marketing should focus on the most profitable customers. The company should acquire, retain, and grow the most profitable customers. The company should also focus on customer satisfaction and loyalty. Not spend more than CLV. Remove negative CLV customers.
