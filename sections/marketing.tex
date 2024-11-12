@@ -111,3 +111,85 @@ Customer Lifetime Value (CLV) is the present value of the future cash flows attr
 CLV affects the company's marketing strategy, customer acquisition, and customer retention. It is important to understand the value of a customer to the company.
 
 Marketing should focus on the most profitable customers. The company should acquire, retain, and grow the most profitable customers. The company should also focus on customer satisfaction and loyalty. Not spend more than CLV. Remove negative CLV customers.
+
+\subsection{Pricing}
+Pricing is the process of determining what a company will receive in exchange for its products. Pricing is the only element in the marketing mix that produces revenue. All other elements represent costs. Pricing is the most flexible element of the marketing mix.
+
+Price determines how much margin can be received from a product in relation to the relatively fixed costs of production.
+
+\begin{center}
+
+	\begin{tikzpicture}[
+		box/.style={draw, rectangle, minimum width=2cm, minimum height=1cm, text width=4cm, align=center},
+		arrow/.style={-{Latex[length=2mm]}, thick},
+		]
+		
+		\node[box] (internal) at (0.1\columnwidth, 0) {\textbf{Internal Factors} \\ \begin{itemize} \item Organisation for Pricing \item Marketing Objectives \item Marketing Mix Strategy Costs \end{itemize}};
+		\node[box] (pricing) at (0.4\columnwidth, -2) {Pricing Decisions};
+		\node[box] (external) at (0.6\columnwidth, 0) {\textbf{External Factors} \\ \begin{itemize} \item Market and Demand \item Competition \item Other Environmental Concerns \end{itemize}};
+
+		\draw[arrow] (internal) -- (pricing);
+		\draw[arrow] (external) -- (pricing);
+
+	\end{tikzpicture}
+\end{center}
+
+Costs determine the Price Floor below which the company will lose money.
+
+Demand determines the Price Ceiling above which the company will sell nothing.
+
+Types of Costs:
+\begin{itemize}
+	\item \textbf{Fixed Costs:} Costs that do not change with the level of production.
+	\item \textbf{Variable Costs:} Costs that change with the level of production.
+	\item \textbf{Total Costs:} Fixed Costs + Variable Costs
+	\item \textbf{Average Costs:} Total Costs / Quantity
+	\item \textbf{Marginal Costs:} The cost of producing one more unit.
+\end{itemize}
+
+\subsection{Experience Curve Pricing}
+The experience curve is a graphical representation of the relationship between unit production costs and cumulative production quantity. The more you produce, the cheaper it gets. This is due to economies of scale, learning curve, and technological improvements.
+
+\begin{center}
+\begin{tikzpicture}
+    % Define the x-axis and y-axis ranges
+    \draw[->] (3,0) -- (10,0) node[below, yshift=-0.5cm, xshift=-3.5cm] {Experience (Cumulative units of Production)}; % x-axis
+    \draw[->] (3,0) -- (3,5) node[left, rotate=90, anchor=south, yshift=0.5cm, xshift=-2cm] {Cost per Unit};                                % y-axis
+
+    % Label the x-axis starting from 40
+    \foreach \x in {40, 50, 60, 70, 80, 90, 100} {
+        \draw (\x/10,0.1) -- (\x/10,-0.1) node[below] {\x}; % Scale x-axis to fit range
+    }
+
+    % Label the y-axis
+    \foreach \y in {1, 2, 3, 4, 5} {
+        \draw (2.9,\y) -- (3.1,\y) node[left, xshift=-0.3cm] {\y}; % Scale y-axis labels as needed
+    }
+
+    % Draw grid lines for x-axis and y-axis
+    \foreach \x in {4, 5, 6, 7, 8, 9, 10} {
+        \draw[dashed, gray] (\x,0) -- (\x,5);
+    }
+    \foreach \y in {1, 2, 3, 4, 5} {
+        \draw[dashed, gray] (3,\y) -- (10,\y);
+    }
+
+    % Plot an example exponential decay curve (adjust as needed)
+    \draw[domain=4:10, smooth, variable=\x, blue, thick] 
+        plot (\x, {1 + 4*exp(-(0.5*\x-2))}); % Adjust this function as needed
+    \draw[dashed, red] (3,1) -- (10,1) node[right] {$y = 1$};
+\end{tikzpicture}
+\end{center}
+
+\subsection{Pricing Strategies}
+\textbf{Price Skimming:} Setting a high price for a new product to skim maximum revenues layer by layer from the segments willing to pay the high price.\\
+\textbf{Penetration Pricing:} Setting a low price for a new product to attract a large number of buyers and a large market share.\\
+\textbf{Markup Pricing:} Adding a standard markup to the cost of the product.\\
+\textbf{Target Return Pricing:} Setting the price to achieve a target return on investment.\\
+$\text{Price} = \text{Direct Costs} + \frac{\text{Fixed Costs} + \text{Target Profit}}{\text{Units Sold}}$\\
+\textbf{Perceived Value Pricing:} Pricing based on the perceived value of the product by the \textbf{Customer}.\\
+\textbf{Psychological Pricing:} Pricing based on the psychology of the customer. E.g. \$9.99 instead of \$10\\
+\textbf{Loss Leader Pricing:} Pricing a product below cost to attract customers.\\
+\textbf{Captive Pricing:} Pricing the main product low and the accessories high.\\
+\textbf{Product Bundle Pricing:} Pricing a bundle of products together.\\
+\textbf{Price Discrimination:} Charging different prices to different customers. E.g. Senior and Student prices.\\
