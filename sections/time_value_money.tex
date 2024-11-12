@@ -1,0 +1,63 @@
+\section{Time Value of Money}
+\subsection{Simple Interest}
+\begin{align*}
+	FV &= PV(1 + rt) \\
+	PV &= \frac{FV}{1 + rt} \\
+	r &= \frac{FV - PV}{PVt} \\
+	t &= \frac{FV - PV}{PVr}
+\end{align*}
+\subsection{Compound Interest}
+\begin{align*}
+	FV &= PV(1 + r)^t \\
+	PV &= \frac{FV}{(1 + r)^t} \\
+	r &= \left(\frac{FV}{PV}\right)^{\frac{1}{t}} - 1 \\
+	t &= \frac{\ln\left(\frac{FV}{PV}\right)}{\ln(1 + r)}\\
+	\text{Discount Factor} DF &= \frac{1}{(1 + r)^t}
+\end{align*}
+Discount factor is the PV of \$1 to be received in $t$ years.
+\subsection{Effective Interest Rate}
+\begin{align*}
+	r_{\text{eff}} &= \left(1 + \frac{r_{\text{nom}}}{n}\right)^n - 1\\
+	r_{\text{nom}} &= n\left(\left(1 + r_{\text{eff}}\right)^{\frac{1}{n}} - 1\right)
+\end{align*}
+Effective interest rate is the annual rate that reflects the effects of compounding.
+\begin{callout}
+	\textbf{Example:} If the APR (nominal rate) is 6\% compounded quarterly, the effective rate is $(1 + \frac{0.06}{4})^4 - 1 = 6.136\%$.
+\end{callout}
+\subsection{Annuities}
+\begin{align*}
+	PV &= \frac{PMT}{r} \left(1 - \frac{1}{(1 + r)^t}\right) \\
+	   &= PMT \left(\frac{1}{r} - \frac{1}{r\cdot (1 + r)^t}\right) \\
+	FV &= PMT \left(\frac{(1 + r)^t - 1}{r}\right) \\
+	PMT &= \frac{PV\cdot r}{1 - \frac{1}{(1 + r)^t}} \\
+	t &= \frac{\ln\left(\frac{FV}{PMT}\right)}{\ln(1 + r)} \\
+	r &= \frac{PMT}{PV} \left(1 - \frac{1}{(1 + r)^t}\right)\\
+PVAF &= \frac{1}{r} - \frac{1}{r\cdot (1 + r)^t}
+\end{align*}
+Annuity is a series of equal payments made at regular intervals with a set maturity.
+\subsubsection{Annuity Due}
+\begin{align*}
+	PV_{\text{annuity due}} &= \frac{PMT}{r} \left(1 - \frac{1}{(1 + r)^t}\right) \cdot (1 + r) \\
+	&= PMT \left(\frac{1}{r} - \frac{1}{r\cdot (1 + r)^t}\right) \cdot (1 + r) \\
+	FV_{\text{annuity due}} &= PMT \left(\frac{(1 + r)^t - 1}{r}\right) \cdot (1 + r) \\
+\end{align*}
+Annity due is an annuity where payments are made at the beginning of each period instead of the end.
+\subsection{Perpetuities}
+\begin{align*}
+	PV &= \frac{PMT}{r} \\
+	PMT &= PV\cdot r
+\end{align*}
+Perpetuity is a series of equal payments made at regular intervals with no maturity.
+\subsection{Amortization}
+\begin{align*}
+	PMT &= \frac{PV\cdot r}{1 - \frac{1}{(1 + r)^t}} \\
+	\text{Interest Payment}_t &= PV_t\cdot r \\
+	\text{Principal Payment}_t &= PMT - \text{Interest Payment}_t\\
+	\text{Remaining Principal}_t &= \frac{PMT}{r} \left(1 - \frac{1}{(1 + r)^{n-t}}\right)
+\end{align*}
+\subsection{Inflation}
+\begin{align*}
+	1 + \text{Real Rate} &= \frac{1 + \text{Nominal Rate}}{1 + \text{Inflation Rate}} \\
+	\text{Real Rate} &\approx \text{Nominal Rate} - \text{Inflation Rate}
+\end{align*}
+test
